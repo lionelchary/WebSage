@@ -1,0 +1,12 @@
+[project]
+name = "websage"
+version = "0.0.1"
+description = "An AI agent that can scrape websites, crawl pages, and extract structured data in real-time to answer your complex queries!"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain-mcp-adapters>=0.1.7",
+    "langchain-openai>=0.3.23",
+    "langgraph>=0.4.8",
+    "python-dotenv>=1.1.0",
+]
