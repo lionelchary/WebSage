@@ -147,7 +147,7 @@ git checkout -b feature/amazing-feature
 git commit -m "Add amazing feature"
 git push origin feature/amazing-feature
 ```
-# 4. Open a pull request
+4. Open a pull request
 
 
 ## 📝 License
