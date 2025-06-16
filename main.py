@@ -48,7 +48,7 @@ async def main():
             while True:
                 user_input = input("\n🗣️  You: ")
                 # If the user wants to quit, break the loop
-                if user_input.lower() in ["quit", "exit", "q", "exit"]:
+                if user_input.lower() in {"quit", "exit", "q", "exit"}:
                     print("👋 Goodbye!")
                     break
                 # If the user input is empty, skip to the next iteration
