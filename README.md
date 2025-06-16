@@ -15,7 +15,7 @@ An intelligent conversational agent that combines OpenAI's GPT models with Firec
 ## 🔧 Prerequisites
 
 - [Python 3.13](https://www.python.org/downloads/) or higher
-- [uv](https://docs.astral.sh/uv/#highlights) (for managing python dependencies and setting up a virtual environment)
+- [uv](https://docs.astral.sh/uv/#highlights) (efficient Python Package Management)
 - [Node.js](https://nodejs.org/en) (for Firecrawl MCP)
 - [OpenAI API](https://platform.openai.com) key
 - [Firecrawl](https://www.firecrawl.dev/) API key
