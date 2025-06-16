@@ -1,6 +1,6 @@
 # 🕷️ WebSage
 
-[![Python 3.12+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.13+](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-green.svg)](https://openai.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web%20Scraping-orange.svg)](https://firecrawl.dev/)
@@ -140,7 +140,7 @@ Contributions are welcome! Here's how:
 1. Fork the repository
 2. Create a feature branch
 ```
-git checkout -b feature/amazing-feature
+git switch -c feature/amazing-feature
 ```
 3. Commit and push your changes
 ```
